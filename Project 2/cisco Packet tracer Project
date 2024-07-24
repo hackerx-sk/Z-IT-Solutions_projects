@@ -1,0 +1,57 @@
+Step 1:  
+       we need these devices to set up the network topology as shown in the table below:
+1.	Router	WRT300N	- 1
+2.	Laptop	laptop	- 3
+  
+Step 2: 
+        Configuring laptops to make them wireless. First, click on the laptop0 and turn off its power to change the ports basically we are going to replace the wired port with the wireless port which is WPC300N.
+Replace with WPC300N and make sure to turn it ON.
+Repeat the same procedure with Laptop1 and Laptop 2.
+after that, we will assign IP addresses and a default gateway to the laptops.
+
+Step 3:
+       Configure the Router with an IP address and Generate a Security key.
+
+First, click on Router and Go to GUI.
+Then click on a setup where you will find the IP address assigned to 192.168.0.1 and subnet mask[255.255.255.0].
+Then disable the DHCP server because we have to configure statically.
+Then Save the settings.
+Then move to the wireless option.
+set Network Name(SSID) is HomeNetwork.
+Save the settings. 
+Then we set the security key.
+Click on wireless security and select security mode as WEP.
+Then we’ll generate KEY by entering 10 digit Hexa-numeric value. eg: 0123456789.
+save the settings.
+
+  
+Step 4: 
+        
+      Now we will configure the laptops using the IP addressing table given below:
+
+S.NO	Device	IPv4 Address	Subnet Mask	Default Gateway
+1.	laptop0	192.168.0.3	255.255.255.0	192.168.0.1
+2.	laptop1	192.168.0.4	255.255.255.0	192.168.0.1
+3.	laptop2	192.168.0.2	255.255.255.0	192.168.0.1
+Configure Laptop0: To configure the laptop first set the IP configuration as static then add the IPv4 address and default gateway.
+Repeat the same process with Laptop1, laptop2 and configure both devices by adding IP configuration.
+
+Step 5: 
+
+       Connect the laptop to the router by entering the security key in the laptop.
+
+Click on laptop0 and go to desktop.
+Click on connect and refresh the network.
+After a few seconds, it will show the name of the network we have assigned.
+Click on HomeNetwork.
+Then enter the security key in WEP key 1 and hit on connect.
+laptop0 will connect with the router.
+Repeat the same process with Laptop1 and laptop2 so that they can connect with the router.
+After all of this, all of the hosts will connect with the router
+
+
+Step 6: 
+
+        Then we’ll verify the wireless connection by pinging the IP address of any laptop or by sending and receiving data packets. For example: Go to the command prompt of Laptop0 and type the following command:
+
+command: ping 192.168.0.3
