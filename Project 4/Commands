@@ -1,0 +1,22 @@
+open kali linux and open the terminal
+
+Commmand :-
+
+  1. Install GPG :-
+                  Sudo apt install gnupg
+
+2. Generate a GPG Key Pair :-
+                              gpg --full-generate-key
+
+3. Encrypting a File :-
+                         gpg --encrypt --recipient <recipient-email> <filename>
+                          Example :- gpg --encrypt --recipient <email-id> <filename>
+
+4. Decrypting a File :-
+                        gpg --decrypt <filename.gpg>
+
+
+
+
+ 
+              
