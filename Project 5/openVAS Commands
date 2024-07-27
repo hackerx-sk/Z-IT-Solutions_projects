@@ -1,0 +1,46 @@
+Installing Openvas on Kali Linux
+sudo apt update                      
+
+sudo apt upgrade -y
+
+sudo apt dist-upgrade -y
+
+sudo apt install openvas
+
+gvm-setup
+
+gvm-check-setup
+
+gvmd --user=admin --new-password=passwd;
+
+Sudo gvm-start
+
+sudo gvm-stop
+
+* Create New User
+sudo runuser -u _gvm -- gvmd --create-user=admin2 --new-password=12345  
+
+* Change Password
+sudo runuser -u _gvm -- gvmd --user=admin --new-password=new_password 
+
+
+Now that we know everything is normal, we can take a closer look at OpenVAS and how it works. Expand the car to scan and> start the task of creating a scan task for the managed computer.
+
+* Creating a Task
+To create a custom task, navigate to the star icon in the upper right corner of the taskbar and select New task.
+
+After selecting ” New Task” from the drop-down menu, you will see a large pop-up window with many options. We will introduce each option part and its purpose.
+
+
+1.Name: permits North American country to line the name the scan are going to be referred to as inside OpenVAS
+2.Scan Targets: The targets to scan, can embrace Hosts, Ports, and Credentials. to make a brand new target you may follow another pop-up, this can be lined later during this task.
+3.Scanner: The scanner to use by default will use the OpenVAS design but you’ll be able to set this to any scanner of your selecting within the settings menu.
+4.Scan Config: OpenVAS has seven totally different scan sorts you can choose from and can be used supported however you’re aggressive or what info you wish to gather from your scan.
+
+Scoping a New Target
+To scope a new target, navigate to the star icon next to Scan Targets.
+
+Above is that the menu for configuring a replacement target. the 2 main choices you may have to be compelled to assemble are the Name and therefore the Hosts. This procedure is fairly uncomplicated and different options will solely be employed in advanced vulnerability management solutions. These are going to be lined in later tasks.
+
+Now that we’ve got our target scoped we are able to still produce our task and start the scan. When the task is created, you’ll come to the scanning management panel, wherever you’ll track and execute the task. To run the task, navigate to the run icon within the operation.
+
